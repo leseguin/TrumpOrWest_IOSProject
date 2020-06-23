@@ -19,9 +19,7 @@
                                 <rect key="frame" x="157" y="562" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="OSI-id-Cjk" secondAttribute="height" multiplier="1:1" id="AgB-Sb-qMd"/>
-                                    <constraint firstAttribute="height" constant="100" id="hVk-wk-GOz"/>
-                                    <constraint firstAttribute="width" constant="100" id="tCd-lC-cZw"/>
+                                    <constraint firstAttribute="height" constant="100" id="ihP-xT-heW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,13 +29,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRUMP or WEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-J4-X8T">
-                                <rect key="frame" x="0.0" y="268" width="414" height="38"/>
+                                <rect key="frame" x="0.0" y="265" width="414" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="oo4-Bs-P1r"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="38"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-12-pgM">
-                                <rect key="frame" x="0.0" y="402" width="414" height="92"/>
+                                <rect key="frame" x="0.0" y="420" width="414" height="92"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Number of questions" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u98-xa-sCT">
                                         <rect key="frame" x="98" y="0.0" width="218" height="20"/>
@@ -69,14 +70,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yQ0-12-pgM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5gM-ci-yVG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ykn-J4-X8T" secondAttribute="trailing" id="9Ta-An-epz"/>
-                            <constraint firstItem="ykn-J4-X8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B42-4T-J6K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSI-id-Cjk" secondAttribute="bottom" constant="200" id="BIj-0Z-SiK"/>
-                            <constraint firstItem="ykn-J4-X8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L3n-WB-YEh"/>
+                            <constraint firstItem="OSI-id-Cjk" firstAttribute="top" secondItem="yQ0-12-pgM" secondAttribute="bottom" constant="50" id="6az-d1-Hbz"/>
+                            <constraint firstItem="ykn-J4-X8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8L2-ni-MPV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQ0-12-pgM" secondAttribute="trailing" id="MMh-IB-XEi"/>
-                            <constraint firstItem="OSI-id-Cjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZj-dO-suc"/>
-                            <constraint firstItem="ykn-J4-X8T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="ier-HY-1yo"/>
-                            <constraint firstItem="OSI-id-Cjk" firstAttribute="top" secondItem="yQ0-12-pgM" secondAttribute="bottom" constant="68" id="x49-Ww-DEe"/>
+                            <constraint firstItem="OSI-id-Cjk" firstAttribute="centerX" secondItem="yQ0-12-pgM" secondAttribute="centerX" id="bFz-Vn-rpz"/>
+                            <constraint firstItem="OSI-id-Cjk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="gaX-ax-p66"/>
+                            <constraint firstItem="yQ0-12-pgM" firstAttribute="top" secondItem="ykn-J4-X8T" secondAttribute="bottom" constant="100" id="naA-XL-ND3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSI-id-Cjk" secondAttribute="bottom" constant="200" id="pl2-Rx-fYz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ykn-J4-X8T" secondAttribute="trailing" id="rfv-CD-pXI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -114,24 +115,21 @@
                                 </constraints>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-0r-VcO">
-                                <rect key="frame" x="0.0" y="99" width="414" height="57"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="403"/>
                                 <subviews>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-Hh-1Cd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="261.5"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sentences of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-rD-0p0">
-                                        <rect key="frame" x="0.0" y="37" width="414" height="20"/>
+                                        <rect key="frame" x="0.0" y="261.5" width="414" height="141.5"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1EP-0r-VcO" secondAttribute="height" multiplier="138:19" id="qxi-6N-LcJ"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-ba-0iv">
-                                <rect key="frame" x="0.0" y="166" width="414" height="350"/>
+                                <rect key="frame" x="0.0" y="512" width="414" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzp-uv-xW8">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="350"/>
