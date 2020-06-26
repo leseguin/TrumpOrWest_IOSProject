@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Ak-bi-AfK">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,47 +12,44 @@
             <objects>
                 <viewController title="Master" id="BYZ-38-t0r" customClass="ViewController" customModule="TrumpOrWest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSI-id-Cjk">
-                                <rect key="frame" x="157" y="562" width="100" height="100"/>
+                                <rect key="frame" x="150" y="436.5" width="20" height="19"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ihP-xT-heW"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="PLAY"/>
+                                <state key="normal" backgroundImage="play.circle" catalog="system"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbN-d2-N7P"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRUMP or WEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-J4-X8T">
-                                <rect key="frame" x="0.0" y="265" width="414" height="55"/>
+                                <rect key="frame" x="-5.5" y="139" width="331" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="oo4-Bs-P1r"/>
+                                    <constraint firstAttribute="height" constant="55" id="aJN-yP-O48"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="38"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-12-pgM">
-                                <rect key="frame" x="0.0" y="420" width="414" height="92"/>
+                                <rect key="frame" x="0.0" y="294" width="320" height="72"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Number of questions" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u98-xa-sCT">
-                                        <rect key="frame" x="98" y="0.0" width="218" height="20"/>
+                                        <rect key="frame" x="51" y="0.0" width="218" height="20"/>
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Number of question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yja-1l-6rY">
-                                        <rect key="frame" x="103" y="30" width="208" height="20"/>
+                                        <rect key="frame" x="56" y="20" width="208" height="20"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-Xb-kGB">
-                                        <rect key="frame" x="160" y="60" width="94" height="32"/>
+                                        <rect key="frame" x="113" y="40" width="94" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -60,24 +57,18 @@
                                         </connections>
                                     </stepper>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="yja-1l-6rY" firstAttribute="top" secondItem="u98-xa-sCT" secondAttribute="bottom" constant="10" id="FvU-Cu-GTK"/>
-                                    <constraint firstItem="zBC-Xb-kGB" firstAttribute="top" secondItem="yja-1l-6rY" secondAttribute="bottom" constant="10" id="rTr-92-UOm"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yQ0-12-pgM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5gM-ci-yVG"/>
-                            <constraint firstItem="OSI-id-Cjk" firstAttribute="top" secondItem="yQ0-12-pgM" secondAttribute="bottom" constant="50" id="6az-d1-Hbz"/>
-                            <constraint firstItem="ykn-J4-X8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8L2-ni-MPV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQ0-12-pgM" secondAttribute="trailing" id="MMh-IB-XEi"/>
-                            <constraint firstItem="OSI-id-Cjk" firstAttribute="centerX" secondItem="yQ0-12-pgM" secondAttribute="centerX" id="bFz-Vn-rpz"/>
-                            <constraint firstItem="OSI-id-Cjk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="gaX-ax-p66"/>
-                            <constraint firstItem="yQ0-12-pgM" firstAttribute="top" secondItem="ykn-J4-X8T" secondAttribute="bottom" constant="100" id="naA-XL-ND3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OSI-id-Cjk" secondAttribute="bottom" constant="200" id="pl2-Rx-fYz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ykn-J4-X8T" secondAttribute="trailing" id="rfv-CD-pXI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQ0-12-pgM" secondAttribute="trailing" id="477-LF-Ypk"/>
+                            <constraint firstItem="ykn-J4-X8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZB-Fs-qHi"/>
+                            <constraint firstItem="OSI-id-Cjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eJz-Aq-roZ"/>
+                            <constraint firstItem="yQ0-12-pgM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jPr-B3-qq0"/>
+                            <constraint firstItem="ykn-J4-X8T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="pUH-ik-aTC"/>
+                            <constraint firstItem="OSI-id-Cjk" firstAttribute="top" secondItem="yQ0-12-pgM" secondAttribute="bottom" constant="70" id="qlh-Hk-2EA"/>
+                            <constraint firstItem="yQ0-12-pgM" firstAttribute="top" secondItem="ykn-J4-X8T" secondAttribute="bottom" constant="100" id="raJ-kr-Oyf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,33 +86,30 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="YiZ-lP-mFn" customClass="DetailViewController" customModule="TrumpOrWest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jt2-Py-h4W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsg-Hq-CZM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="86g-OA-23g"/>
-                                </constraints>
+                                <rect key="frame" x="120" y="15" width="80.5" height="38"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-7R-xKc">
-                                <rect key="frame" x="0.0" y="79" width="414" height="10"/>
+                                <rect key="frame" x="0.0" y="43" width="320" height="10"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="hcw-mb-mHb"/>
                                 </constraints>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-0r-VcO">
-                                <rect key="frame" x="0.0" y="99" width="414" height="403"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="57"/>
                                 <subviews>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-Hh-1Cd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="261.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sentences of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-rD-0p0">
-                                        <rect key="frame" x="0.0" y="261.5" width="414" height="141.5"/>
+                                        <rect key="frame" x="0.0" y="37" width="320" height="20"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -129,10 +117,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-ba-0iv">
-                                <rect key="frame" x="0.0" y="512" width="414" height="350"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="350"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzp-uv-xW8">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="350"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="350"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,7 +130,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUC-VQ-UQv">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="350"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="350"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,13 +154,12 @@
                             <constraint firstItem="1EP-0r-VcO" firstAttribute="leading" secondItem="tQJ-7R-xKc" secondAttribute="leading" id="1HZ-W1-zt9"/>
                             <constraint firstItem="i5g-ba-0iv" firstAttribute="leading" secondItem="tQJ-7R-xKc" secondAttribute="leading" id="5dT-eF-rLd"/>
                             <constraint firstItem="1EP-0r-VcO" firstAttribute="top" secondItem="tQJ-7R-xKc" secondAttribute="bottom" constant="10" id="74e-xC-Nd1"/>
-                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="trailing" secondItem="tQJ-7R-xKc" secondAttribute="trailing" id="Bof-7n-tc9"/>
                             <constraint firstItem="i5g-ba-0iv" firstAttribute="trailing" secondItem="tQJ-7R-xKc" secondAttribute="trailing" id="DeA-WZ-axZ"/>
+                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="top" secondItem="VWM-4q-ZCG" secondAttribute="top" constant="15" id="MPC-Ys-wVt"/>
                             <constraint firstItem="i5g-ba-0iv" firstAttribute="top" secondItem="1EP-0r-VcO" secondAttribute="bottom" constant="10" id="PKU-DB-K5h"/>
-                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="top" secondItem="VWM-4q-ZCG" secondAttribute="top" id="ZEy-15-avz"/>
-                            <constraint firstItem="tQJ-7R-xKc" firstAttribute="top" secondItem="fsg-Hq-CZM" secondAttribute="bottom" constant="10" id="n3b-Dn-l5q"/>
+                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="bottom" secondItem="tQJ-7R-xKc" secondAttribute="bottom" id="aFS-Vx-CSR"/>
+                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="centerX" secondItem="Jt2-Py-h4W" secondAttribute="centerX" id="g28-Ts-bu5"/>
                             <constraint firstItem="1EP-0r-VcO" firstAttribute="top" secondItem="tQJ-7R-xKc" secondAttribute="bottom" constant="10" id="oVV-Cr-nV1"/>
-                            <constraint firstItem="fsg-Hq-CZM" firstAttribute="leading" secondItem="tQJ-7R-xKc" secondAttribute="leading" id="r77-5V-VgF"/>
                             <constraint firstItem="VWM-4q-ZCG" firstAttribute="bottom" secondItem="i5g-ba-0iv" secondAttribute="bottom" id="tdl-3D-dqP"/>
                             <constraint firstItem="1EP-0r-VcO" firstAttribute="trailing" secondItem="tQJ-7R-xKc" secondAttribute="trailing" id="vbx-kS-hvs"/>
                             <constraint firstItem="VWM-4q-ZCG" firstAttribute="trailing" secondItem="1EP-0r-VcO" secondAttribute="trailing" id="y9Q-wQ-SSg"/>
@@ -198,7 +185,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ak-bi-AfK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Sl-H4-hzN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -211,4 +198,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

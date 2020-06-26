@@ -103,7 +103,7 @@ public class SentenceService{
 
     
     func getWestSentence(  completion: @escaping (Result<Int, ErreurModerator>) -> Void){
-        guard let url = URL(string: "") //https://api.kanye.rest
+        guard let url = URL(string: "https://api.kanye.rest") //
             else {
                 return completion(.failure(.badURL))
         }

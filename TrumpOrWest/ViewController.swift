@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var numberQuest : Int = 5
+    private var numberQuest : Int = 1
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        numberOfQuest.text = "5"
+        numberOfQuest.text = String(numberQuest)
     }
     @IBOutlet weak var numberOfQuest: UITextField!
     
@@ -30,16 +30,6 @@ class ViewController: UIViewController {
         myVC.numberOfQuestion = numberQuest
         navigationController?.pushViewController(myVC, animated: true)
     }
-    
-    /*
-    @IBAction func playButton(_ sender: UIButton) {
-        let vc = DetailViewController()
-        vc.numberOfQuestion = numberQuest
-        print("ici")
-        navigationController?.pushViewController(vc, animated: true)
-        print("ici2")
-    }
- 
- */
+
 }
 
