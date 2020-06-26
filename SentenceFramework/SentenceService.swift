@@ -28,18 +28,6 @@ public class SentenceService{
     }
     
     
-    private func createSentenceFromData(data : Data) -> Mess {
-        var driver : Mess!
-        let decoder = JSONDecoder()
-        do {
-            driver = try decoder.decode(Mess.self, from: data)
-        } catch {
-            fatalError("Decodage Failed : \(error)") // Ajouter exception
-        }
-        return driver
-    }
-    
-    
     public func getQuote( from : String ) -> String{
         if (from == TRUMP) {
             getTrumpSentence() { result in
@@ -67,7 +55,6 @@ public class SentenceService{
     }
     
     func getTrumpSentence( completion: @escaping (Result<Int, ErreurModerator>) -> Void){
-        print("la")
         guard let url = URL(string: "https://api.whatdoestrumpthink.com/api/v1/quotes/random")
             else {
                 return completion(.failure(.badURL))
@@ -87,7 +74,6 @@ public class SentenceService{
                 do {
                     sent = try decoder.decode(TrumpMess.self, from: dataResponse)
                 } catch {
-                    //fatalError("Decodage Failed : \(error)") // Ajouter exception
                     return completion(.failure(.failedToDecodeJSON))
                 }
                 self.trumpMess = sent

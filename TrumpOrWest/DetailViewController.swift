@@ -19,26 +19,25 @@ class DetailViewController: UIViewController {
     
     private var customView: UIView!
 
-    
     @IBOutlet weak var progressOutlet: UIProgressView!
     
     @IBOutlet weak var scoreOutlet: UILabel!
     
     @IBOutlet weak var sentenceToFind: UILabel!
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
 
     @IBAction func trumpAction(_ sender: UIButton) {
         isThis(speaker: TRUMP)
-    }
-
-    private func presentAlert() {
-        let alertVC = UIAlertController(title: "Error", message: "The quote download failed.", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
     }
     
     @IBAction func westAction(_ sender: UIButton) {
         isThis(speaker: WEST)
     }
+    
+    @IBOutlet weak var buttonGoBack: UIButton!
+    
+    @IBOutlet weak var buttonStack: UIStackView!
     
     private func isThis(speaker : String){
         if(speaker == currSentence.speaker) {
@@ -46,6 +45,12 @@ class DetailViewController: UIViewController {
         } else {
             itsALose()
         }
+    }
+    
+    private func presentAlert() {
+        let alertVC = UIAlertController(title: "Error", message: "The quote download failed.", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
 
 
@@ -97,19 +102,24 @@ class DetailViewController: UIViewController {
         
         
     }
+
     
-    @IBOutlet weak var buttonStack: UIStackView!
+    private func disableButtonAtStart(){
+        buttonStack.isHidden = true
+        buttonGoBack.isHidden = false
+    }
     
     private func disableButton(){
         buttonStack.isHidden = true
+        buttonGoBack.isHidden = false
     }
     
     private func showButtons(){
         buttonStack.isHidden = false
-        
+        buttonGoBack.isHidden = true
     }
     
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     
     func putActivityIndicator() {
         indicator.startAnimating()
@@ -117,16 +127,15 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        disableButtonAtStart()
+        buttonGoBack.isHidden = true
         scoreOutlet.text = String(point)
         game.numberOfSentence = numberOfQuestion
         
         let ratio = Float(point) / Float(numberOfQuestion)
         progressOutlet.progress = ratio
-        
-        print("init")
         putActivityIndicator()
-        disableButton()
+        //disableButtonAtStart()
         sentenceToFind.text = "Looking for stupidity"
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { [weak self] in
             
