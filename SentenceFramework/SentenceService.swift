@@ -10,11 +10,16 @@ import Foundation
 
 public class SentenceService{
     
-    //private let trumpURL =
     public var trumpMess : TrumpMess
     public var westMess : WestMess
     
-    
+    enum ErreurModerator: Error {
+        case badURL
+        case errorResponse
+        case badJsonResponse
+        case failedToDecodeJSON
+        case failedTask
+    }
 
     
     public init(){
@@ -22,15 +27,7 @@ public class SentenceService{
         westMess = WestMess()
     }
     
-    private static func createQuoteRequest() -> URLRequest {
-        var request = URLRequest(url: URL(string: "https://api.whatdoestrumpthink.com/api/v1/quotes/random")!)
-        request.httpMethod = "GET"
-
-        return request
-    }
     
-
-
     private func createSentenceFromData(data : Data) -> Mess {
         var driver : Mess!
         let decoder = JSONDecoder()
@@ -45,42 +42,57 @@ public class SentenceService{
     
     public func getQuote( from : String ) -> String{
         if (from == TRUMP) {
-            getTrumpSentence()
+            getTrumpSentence() { result in
+                switch result{
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        return
+                    case .success(let str):
+                        print(str)
+                }
+            }
             return trumpMess.message
         } else {
-            getWestSentence()
+            getWestSentence() { result in
+                switch result{
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        return
+                    case .success(let str):
+                        print(str)
+                }
+            }
             return westMess.quote
         }
     }
     
-    public func getTrumpSentence(){
+    func getTrumpSentence( completion: @escaping (Result<Int, ErreurModerator>) -> Void){
         print("la")
         guard let url = URL(string: "https://api.whatdoestrumpthink.com/api/v1/quotes/random")
             else {
-                print("error")
-                return
+                return completion(.failure(.badURL))
         }
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let dataResponse = data,
                 error == nil else {
-                    print("error response")
-                    return
+                    return completion(.failure(.errorResponse))
             }
             do{
                 let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
                 guard jsonResponse is [String: Any] else {
-                    return
+                    return completion(.failure(.badJsonResponse))
                 }
                 var sent : TrumpMess!
                 let decoder = JSONDecoder()
                 do {
                     sent = try decoder.decode(TrumpMess.self, from: dataResponse)
                 } catch {
-                    fatalError("Decodage Failed : \(error)") // Ajouter exception
+                    //fatalError("Decodage Failed : \(error)") // Ajouter exception
+                    return completion(.failure(.failedToDecodeJSON))
                 }
                 self.trumpMess = sent
             } catch {
-                print(error)
+                return completion(.failure(.failedTask))
             }
             
         }
@@ -88,35 +100,34 @@ public class SentenceService{
         sleep(1)
     }
     
+
     
-    public func getWestSentence(){
-        print("la")
-        guard let url = URL(string: "https://api.kanye.rest")
+    func getWestSentence(  completion: @escaping (Result<Int, ErreurModerator>) -> Void){
+        guard let url = URL(string: "") //https://api.kanye.rest
             else {
-                print("error")
-                return
+                return completion(.failure(.badURL))
         }
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let dataResponse = data,
                 error == nil else {
-                    print("error response")
-                    return
+                    return completion(.failure(.errorResponse))
             }
             do{
                 let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
                 guard jsonResponse is [String: Any] else {
-                    return
+                    return completion(.failure(.badJsonResponse))
                 }
                 var sent : WestMess!
                 let decoder = JSONDecoder()
                 do {
                     sent = try decoder.decode(WestMess.self, from: dataResponse)
                 } catch {
-                    fatalError("Decodage Failed : \(error)") // Ajouter exception
+                    //fatalError("Decodage Failed : \(error)") // Ajouter exception
+                    return completion(.failure(.failedToDecodeJSON))
                 }
                 self.westMess = sent
             } catch {
-                print(error)
+                return completion(.failure(.failedTask))
             }
             
         }

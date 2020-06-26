@@ -14,12 +14,9 @@ public let WEST = "WEST"
 
 private var sentService = SentenceService()
 
-
 public struct Sentence{
     public var speaker : String
     public var message : String
-    
-
     
     init(){
         speaker = speakers.randomElement()!
@@ -37,15 +34,11 @@ public struct Sentence{
     }
     
     public mutating func setSentence(){
-        
         switch speaker {
         case TRUMP:
             message = sentService.getQuote(from: self.speaker)
         default:
             message = sentService.getQuote(from: self.speaker)
         }
-                
-        //print("COUCOU" + message.message)
- 
     }
 }
