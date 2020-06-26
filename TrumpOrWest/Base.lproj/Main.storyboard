@@ -16,11 +16,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSI-id-Cjk">
-                                <rect key="frame" x="177.66666666666666" y="393" width="19.666666666666657" height="19"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="play.circle" catalog="system"/>
+                                <rect key="frame" x="143" y="392" width="89" height="34"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Let's Go">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbN-d2-N7P"/>
                                 </connections>
@@ -90,32 +91,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsg-Hq-CZM">
-                                <rect key="frame" x="147.33333333333334" y="69" width="80.333333333333343" height="312"/>
+                                <rect key="frame" x="147.33333333333334" y="69" width="80.333333333333343" height="282"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-7R-xKc">
-                                <rect key="frame" x="0.0" y="371" width="375" height="10"/>
+                                <rect key="frame" x="0.0" y="341" width="375" height="10"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="hcw-mb-mHb"/>
                                 </constraints>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-0r-VcO">
-                                <rect key="frame" x="0.0" y="391" width="375" height="27"/>
+                                <rect key="frame" x="0.0" y="361" width="375" height="57"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-Hh-1Cd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="17.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sentences of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-rD-0p0">
-                                        <rect key="frame" x="0.0" y="17.666666666666686" width="375" height="9.3333333333333357"/>
+                                        <rect key="frame" x="0.0" y="37" width="375" height="20"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Ic-3h-3YO">
-                                        <rect key="frame" x="0.0" y="42" width="375" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="57" width="375" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="56"/>
                                         <state key="normal" title="Thanks. ">
@@ -126,9 +127,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="0Ic-3h-3YO" firstAttribute="top" secondItem="3fN-rD-0p0" secondAttribute="bottom" constant="15" id="ra7-59-job"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-ba-0iv">
                                 <rect key="frame" x="0.0" y="428" width="375" height="350"/>
@@ -217,7 +215,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="bWX-Re-xIf"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="play.circle" catalog="system" width="32" height="32"/>
-    </resources>
 </document>
