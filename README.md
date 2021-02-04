@@ -5,7 +5,7 @@
 
 ## Description du sujet
 
-Un jeu developpé pour IOS. Le but est de deviner qui à dit la phrase proposé entre Kanie West et Donald Trump.
+Un jeu developpé pour IOS. Le but est de deviner qui a dit la phrase proposée entre Kanie West et Donald Trump.
 
 
 ## Points techniques abordés
